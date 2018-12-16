@@ -39,14 +39,14 @@ const EventStack = createStackNavigator({
 });
 
 EventStack.navigationOptions = {
-  tabBarLabel: "Events",
+  tabBarLabel: "Event",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
       name={
         Platform.OS === "ios"
-          ? `ios-list-box${focused ? "" : "-outline"}`
-          : "md-list-box"
+          ? `ios-document${focused ? "" : "-outline"}`
+          : "md-document"
       }
     />
   )

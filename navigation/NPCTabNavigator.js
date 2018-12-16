@@ -45,8 +45,8 @@ NPCStack.navigationOptions = {
       focused={focused}
       name={
         Platform.OS === "ios"
-          ? `ios-list-box${focused ? "" : "-outline"}`
-          : "md-list-box"
+          ? `ios-apps${focused ? "" : "-outline"}`
+          : "md-apps"
       }
     />
   )

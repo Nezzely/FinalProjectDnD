@@ -25,9 +25,7 @@ MainStack.navigationOptions = {
     <TabBarIcon
       focused={focused}
       name={
-        Platform.OS === "ios"
-          ? `ios-list-box${focused ? "" : "-outline"}`
-          : "md-list-box"
+        Platform.OS === "ios" ? `ios-map${focused ? "" : "-outline"}` : "md-map"
       }
     />
   )

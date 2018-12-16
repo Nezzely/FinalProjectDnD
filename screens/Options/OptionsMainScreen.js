@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { LinearGradient } from "expo";
 
-export default class OptionScreen extends React.Component {
+export default class OptionMainScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -23,13 +23,7 @@ export default class OptionScreen extends React.Component {
         style={styles.linearGradient}
       >
         <TouchableOpacity onPress={this.SignIn} style={styles.buttons}>
-          <Text>Add Item</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={this.SignIn} style={styles.buttons}>
-          <Text>Remove Item</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={this.SignIn} style={styles.buttons}>
-          <Text>Edit Item</Text>
+          <Text>Create New Campaign</Text>
         </TouchableOpacity>
       </LinearGradient>
     );

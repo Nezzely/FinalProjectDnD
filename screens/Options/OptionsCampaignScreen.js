@@ -10,7 +10,7 @@ import {
 } from "react-native";
 import { LinearGradient } from "expo";
 
-export default class OptionScreen extends React.Component {
+export default class OptionCampaignScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};

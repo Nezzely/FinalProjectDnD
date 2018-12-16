@@ -47,8 +47,8 @@ CampaignStack.navigationOptions = {
       focused={focused}
       name={
         Platform.OS === "ios"
-          ? `ios-list-box${focused ? "" : "-outline"}`
-          : "md-list-box"
+          ? `ios-list${focused ? "" : "-outline"}`
+          : "md-list"
       }
     />
   )
