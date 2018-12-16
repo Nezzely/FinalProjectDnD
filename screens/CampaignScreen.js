@@ -20,7 +20,7 @@ export default class CampaignScreen extends React.Component {
     this.props.navigation.navigate("Event");
   };
   renderSectionHeader = ({ section, index }) => {
-    return <Text style={styles.campaignTitleText}>{section.title}</Text>;
+    return <Text style={styles.TitleText}>{section.title}</Text>;
   };
 
   renderItem = obj => {
@@ -32,14 +32,14 @@ export default class CampaignScreen extends React.Component {
           this.NextScreenTemp();
         }}
       >
-        <View style={styles.campaignItemView}>
+        <View style={styles.ItemView}>
           <Image
-            style={styles.campaignPicture}
+            style={styles.elementPicture}
             source={{
               uri: obj.item.image
             }}
           />
-          <Text style={styles.campaignTitleText}>{obj.item.name}</Text>
+          <Text style={styles.TitleText}>{obj.item.name}</Text>
         </View>
       </TouchableOpacity>
     );
@@ -111,6 +111,7 @@ export default class CampaignScreen extends React.Component {
           ]}
           renderSectionHeader={this.renderSectionHeader}
           renderItem={this.renderItem}
+          keyExtractor={(item, index) => item.name + index}
         />
       </LinearGradient>
     );
@@ -132,7 +133,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginTop: 10
   },
-  campaignItemView: {
+  ItemView: {
     alignItems: "center",
     justifyContent: "flex-start",
     flexDirection: "row",
@@ -141,11 +142,11 @@ const styles = StyleSheet.create({
     borderColor: "white",
     borderWidth: 2
   },
-  campaignPicture: {
+  elementPicture: {
     width: 100,
     height: 100
   },
-  campaignTitleText: {
+  TitleText: {
     fontFamily: "serif",
     textAlign: "center",
     fontWeight: "bold",
