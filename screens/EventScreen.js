@@ -9,7 +9,10 @@ export default class EventScreen extends React.Component {
   }
 
   NextScreenTemp = () => {
-    this.props.navigation.navigate("NPC");
+    this.props.navigation.navigate("NPCScreen", {
+      eventName: this.props.navigation.getParam("eventName"),
+      campaignName: this.props.navigation.getParam("campaignName")
+    });
   };
 
   render() {

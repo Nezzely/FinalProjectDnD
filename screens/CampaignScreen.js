@@ -16,7 +16,8 @@ export default class CampaignScreen extends React.Component {
 
   NextScreenTemp = itemName => {
     this.props.navigation.navigate("EventScreen", {
-      eventName: itemName
+      eventName: itemName,
+      campaignName: this.props.navigation.getParam("campaignName")
     });
   };
   renderSectionHeader = ({ section, index }) => {

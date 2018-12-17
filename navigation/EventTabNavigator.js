@@ -17,7 +17,9 @@ const EventStack = createStackNavigator({
       headerLeft: (
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("Campaign");
+            navigation.navigate("CampaignScreen", {
+              campaignName: navigation.getParam("campaignName")
+            });
           }}
         >
           <Icon.Ionicons
