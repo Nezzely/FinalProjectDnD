@@ -15,6 +15,12 @@ export default class OptionsMainScreen extends React.Component {
     this.state = {};
   }
 
+  logOut = () => {
+    this.props.navigation.navigate("AppEntry");
+  };
+
+  //TODO: Navigation to New Campaign
+
   render() {
     return (
       <LinearGradient
@@ -23,7 +29,7 @@ export default class OptionsMainScreen extends React.Component {
       >
         <TouchableOpacity
           onPress={() => {
-            true;
+            this.logOut();
           }}
           style={styles.buttonLogout}
         >

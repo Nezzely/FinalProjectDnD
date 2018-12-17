@@ -14,7 +14,14 @@ export default class OptionsEventScreen extends React.Component {
     super(props);
     this.state = {};
   }
+  logOut = () => {
+    this.props.navigation.navigate("AppEntry");
+  };
+  //TODO: Make text Readable or change background on buttons
 
+  //TODO: Navigation to AddNPCScreeen
+  //TODO: Navigation to EditEventScreen
+  //TODO: Navigation to CampaignScreen Via "delete Event"
   render() {
     return (
       <LinearGradient
@@ -23,7 +30,7 @@ export default class OptionsEventScreen extends React.Component {
       >
         <TouchableOpacity
           onPress={() => {
-            true;
+            this.logOut();
           }}
           style={styles.buttonLogout}
         >

@@ -2,6 +2,7 @@ import React from "react";
 import { Text, StyleSheet } from "react-native";
 import { LinearGradient } from "expo";
 
+//TODO: Make this screen displaying all the data that a NPC has
 export default class NPCScreen extends React.Component {
   constructor(props) {
     super(props);

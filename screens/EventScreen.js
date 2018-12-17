@@ -8,7 +8,8 @@ import {
   Image
 } from "react-native";
 import { LinearGradient } from "expo";
-
+//TODO: Fix the list so it is centered
+//TODO: in Data.js change the pictures so that they all have the, / look good
 export default class EventScreen extends React.Component {
   constructor(props) {
     super(props);

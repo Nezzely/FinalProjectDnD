@@ -14,6 +14,15 @@ export default class OptionsCampaignScreen extends React.Component {
     super(props);
     this.state = {};
   }
+  logOut = () => {
+    this.props.navigation.navigate("AppEntry");
+  };
+
+  //TODO: Make text Readable or change background on buttons
+
+  //TODO: Navigation to NewEventScreen
+  //TODO: Navigation to EditCampaignScreen
+  //TODO: Navigation to MainScreen Via "Delete Campaign"
 
   render() {
     return (
@@ -23,7 +32,7 @@ export default class OptionsCampaignScreen extends React.Component {
       >
         <TouchableOpacity
           onPress={() => {
-            true;
+            this.logOut();
           }}
           style={styles.buttonLogout}
         >

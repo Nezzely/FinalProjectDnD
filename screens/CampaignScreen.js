@@ -3,14 +3,13 @@ import {
   View,
   Text,
   StyleSheet,
-  SectionList,
   FlatList,
   TouchableOpacity,
   Image
 } from "react-native";
 import { LinearGradient } from "expo";
-import data from "../Data";
-
+//TODO: Fix the list so it is centered
+//TODO: in Data.js change the pictures so that they all have the, / look good
 export default class CampaignScreen extends React.Component {
   constructor(props) {
     super(props);
