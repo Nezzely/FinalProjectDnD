@@ -13,7 +13,7 @@ export default class MainScreen extends React.Component {
   NavCampaignForm = () => {
     //navigate to the form
   };
-  NextScreenTemp = () => {
+  NextScreenTemp = item => {
     this.props.navigation.navigate("Campaign");
   };
   renderItem = ({ item }) => {
@@ -22,7 +22,7 @@ export default class MainScreen extends React.Component {
       //TouchableOpacity with one passed in from this.props
       <TouchableOpacity
         onPress={() => {
-          this.NextScreenTemp();
+          this.NextScreenTemp(item);
         }}
       >
         <View style={styles.campaignItemView}>

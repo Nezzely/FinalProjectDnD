@@ -8,7 +8,7 @@ import {
 import Colors from "../constants/Colors";
 import TabBarIcon from "../components/TabBarIcon";
 import CampaignScreen from "../screens/CampaignScreen";
-import OptionScreen from "../screens/Options/OptionScreen";
+import OptionsEventScreen from "../screens/Options/OptionsEventScreen";
 
 const CampaignStack = createStackNavigator({
   CampaignScreen: {
@@ -33,7 +33,7 @@ const CampaignStack = createStackNavigator({
           />
         </TouchableOpacity>
       ),
-      title: `"CampaignName"`
+      title: "'Events List'"
 
       //TODO: Get the ClickedName
     })
@@ -56,7 +56,7 @@ CampaignStack.navigationOptions = {
 
 const SettingsStack = createStackNavigator({
   Settings: {
-    screen: OptionScreen,
+    screen: OptionsEventScreen,
 
     navigationOptions: ({ navigation }) => ({
       title: "Options"
