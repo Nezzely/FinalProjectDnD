@@ -20,7 +20,7 @@ const MainStack = createStackNavigator({
 });
 
 MainStack.navigationOptions = {
-  tabBarLabel: "Campaigns",
+  tabBarLabel: "Main",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}

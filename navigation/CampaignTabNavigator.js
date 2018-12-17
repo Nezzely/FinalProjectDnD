@@ -38,7 +38,7 @@ const CampaignStack = createStackNavigator({
 });
 
 CampaignStack.navigationOptions = {
-  tabBarLabel: "Events",
+  tabBarLabel: "Campaign",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}

@@ -42,7 +42,7 @@ const NPCStack = createStackNavigator({
 });
 
 NPCStack.navigationOptions = {
-  tabBarLabel: "Events",
+  tabBarLabel: "NPCs",
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
