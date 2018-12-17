@@ -8,7 +8,7 @@ import {
 import Colors from "../constants/Colors";
 import TabBarIcon from "../components/TabBarIcon";
 import EventScreen from "../screens/EventScreen";
-import OptionScreen from "../screens/Options/OptionScreen";
+import OptionsEventScreen from "../screens/Options/OptionsEventScreen";
 
 const EventStack = createStackNavigator({
   EventScreen: {
@@ -34,7 +34,7 @@ const EventStack = createStackNavigator({
           />
         </TouchableOpacity>
       ),
-      title: navigation.getParam("eventName", "Error")
+      title: "Event: " + navigation.getParam("eventName", "Error")
     })
   }
 });
@@ -55,10 +55,10 @@ EventStack.navigationOptions = {
 
 const SettingsStack = createStackNavigator({
   Settings: {
-    screen: OptionScreen,
+    screen: OptionsEventScreen,
 
     navigationOptions: ({ navigation }) => ({
-      title: "Options"
+      title: "Event Options"
     })
   }
 });

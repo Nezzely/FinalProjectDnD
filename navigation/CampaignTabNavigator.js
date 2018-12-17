@@ -8,7 +8,7 @@ import {
 import Colors from "../constants/Colors";
 import TabBarIcon from "../components/TabBarIcon";
 import CampaignScreen from "../screens/CampaignScreen";
-import OptionsEventScreen from "../screens/Options/OptionsEventScreen";
+import OptionsCampaignScreen from "../screens/Options/OptionsCampaignScreen";
 
 const CampaignStack = createStackNavigator({
   CampaignScreen: {
@@ -32,7 +32,7 @@ const CampaignStack = createStackNavigator({
           />
         </TouchableOpacity>
       ),
-      title: navigation.getParam("campaignName", "Error")
+      title: "Campaign: " + navigation.getParam("campaignName", "Error")
     })
   }
 });
@@ -53,10 +53,10 @@ CampaignStack.navigationOptions = {
 
 const SettingsStack = createStackNavigator({
   Settings: {
-    screen: OptionsEventScreen,
+    screen: OptionsCampaignScreen,
 
     navigationOptions: ({ navigation }) => ({
-      title: "Options"
+      title: "Campaign Options"
     })
   }
 });

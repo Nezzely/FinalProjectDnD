@@ -116,34 +116,35 @@ export default class AppEntryScreen extends React.Component {
         colors={["#348AC7", "#7474BF"]}
         style={styles.linearGradient}
       >
-        <View style={styles.container}>
-          <View style={styles.headerView}>
-            <Text style={styles.headerText}>
-              <Text>D&D{"\n"}</Text>
-              <Text>Dungeon Master{"\n"}</Text>
-              <Text>Managment Tool</Text>
-            </Text>
-          </View>
-          <View style={styles.buttonsView}>
-            <TouchableOpacity onPress={this.Login} style={styles.buttons}>
-              <Text>Login</Text>
-            </TouchableOpacity>
-            <TouchableOpacity onPress={this.Create} style={styles.buttons}>
-              <Text>Create Account</Text>
-            </TouchableOpacity>
-          </View>
-          {this.LoginCreate_ViewToggle()}
+        <View style={styles.headerView}>
+          <Text style={styles.headerText}>
+            <Text>D&D{"\n"}</Text>
+            <Text>Dungeon Master{"\n"}</Text>
+            <Text>Managment Tool</Text>
+          </Text>
         </View>
+        <View style={styles.buttonsView}>
+          <TouchableOpacity onPress={this.Login} style={styles.buttons}>
+            <Text>Login</Text>
+          </TouchableOpacity>
+          <TouchableOpacity onPress={this.Create} style={styles.buttons}>
+            <Text>Create Account</Text>
+          </TouchableOpacity>
+        </View>
+        {this.LoginCreate_ViewToggle()}
       </LinearGradient>
     );
   }
 }
 
 const styles = StyleSheet.create({
+  login: {
+    textAlign: "center"
+  },
   linearGradient: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center"
+    alignItems: "center"
+    //justifyContent: "center"
   },
   container: {
     flex: 1,
@@ -161,9 +162,9 @@ const styles = StyleSheet.create({
   textfieldView: {
     width: 250,
     alignItems: "center",
-    justifyContent: "space-evenly",
-    borderColor: "white",
-    borderWidth: 2
+    justifyContent: "space-evenly"
+    //borderColor: "white",
+    //borderWidth: 2
   },
   headerText: {
     textAlign: "center",

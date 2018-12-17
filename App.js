@@ -3,10 +3,32 @@ import { Platform, StatusBar, StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-navigation";
 import { AppLoading, Asset, Font, Icon } from "expo";
 import AppNavigator from "./navigation/AppNavigator";
+import data from "./Data";
 
 export default class App extends React.Component {
   state = {
-    isLoadingComplete: false
+    isLoadingComplete: false,
+    mainScreenData: data.applicationData,
+    campaignScreenData: null,
+    eventScreenData: null
+  };
+
+  searchStateDataKey = (stateData, key, dataType) => {
+    for (var i = 0; i < stateData.length; i++)
+      if (stateData[i]["key"] === key) return stateData[i][dataType];
+    return null;
+  };
+
+  updateCampaignData = key => {
+    let { mainScreenData } = this.state;
+    let newData = this.searchStateDataKey(mainScreenData, key, "eventList");
+    this.setState({ campaignScreenData: newData });
+  };
+
+  updateEventData = key => {
+    let { campaignScreenData } = this.state;
+    let newData = this.searchStateDataKey(campaignScreenData, key, "NPCList");
+    this.setState({ eventScreenData: newData });
   };
 
   render() {
@@ -23,7 +45,15 @@ export default class App extends React.Component {
         <View style={styles.container}>
           {Platform.OS === "ios" && <StatusBar barStyle="default" />}
           <SafeAreaView style={styles.safeViewContainer}>
-            <AppNavigator />
+            <AppNavigator
+              screenProps={{
+                mainScreenData: this.state.mainScreenData,
+                campaignScreenData: this.state.campaignScreenData,
+                eventScreenData: this.state.eventScreenData,
+                updateCampaignData: this.updateCampaignData,
+                updateEventData: this.updateEventData
+              }}
+            />
           </SafeAreaView>
         </View>
       );

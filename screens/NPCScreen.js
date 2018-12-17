@@ -14,7 +14,7 @@ export default class NPCScreen extends React.Component {
         colors={["#348AC7", "#7474BF"]}
         style={styles.linearGradient}
       >
-        <Text>Data Base For all NPC kinda hot though.</Text>
+        <Text>All the Data For NPC</Text>
       </LinearGradient>
     );
   }

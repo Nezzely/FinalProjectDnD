@@ -51,10 +51,7 @@ export default class OptionsEventScreen extends React.Component {
         >
           <ImageBackground
             style={styles.picture}
-            source={{
-              uri:
-                "https://cache.desktopnexus.com/thumbseg/841/841947-bigthumbnail.jpg"
-            }}
+            //source={{ uri:            }}
           >
             <Icon.Ionicons
               name={Platform.OS === "ios" ? "ios-add-circle" : "md-add-circle"}
@@ -62,7 +59,7 @@ export default class OptionsEventScreen extends React.Component {
               style={{ marginLeft: 10 }}
               color={"white"}
             />
-            <Text style={styles.Text}>New Event</Text>
+            <Text style={styles.Text}>Edit Event</Text>
           </ImageBackground>
         </TouchableOpacity>
         <TouchableOpacity
@@ -73,10 +70,7 @@ export default class OptionsEventScreen extends React.Component {
         >
           <ImageBackground
             style={styles.picture}
-            source={{
-              uri:
-                "https://227rsi2stdr53e3wto2skssd7xe-wpengine.netdna-ssl.com/wp-content/uploads/2016/02/oldbrainstorm-e1454479398880-730x280.jpg"
-            }}
+            //source={{ uri:            }}
           >
             <Icon.Ionicons
               name={Platform.OS === "ios" ? "ios-cog" : "md-cog"}
@@ -84,7 +78,7 @@ export default class OptionsEventScreen extends React.Component {
               style={{ marginLeft: 10 }}
               color={"white"}
             />
-            <Text style={styles.Text}>Edit Campaign</Text>
+            <Text style={styles.Text}>Add NPC</Text>
           </ImageBackground>
         </TouchableOpacity>
         <TouchableOpacity
@@ -95,10 +89,7 @@ export default class OptionsEventScreen extends React.Component {
         >
           <ImageBackground
             style={styles.picture}
-            source={{
-              uri:
-                "https://2static1.fjcdn.com/comments/Quotspontaneous+combustion+is+a+myth+if+you+burst+into+flame+_15cabbe0b8ec336880a2c85266f6ca88.jpg"
-            }}
+            //source={{ uri:            }}
           >
             <Icon.Ionicons
               name={Platform.OS === "ios" ? "ios-trash" : "md-trash"}
@@ -106,7 +97,7 @@ export default class OptionsEventScreen extends React.Component {
               style={{ marginLeft: 10 }}
               color={"white"}
             />
-            <Text style={styles.Text}>Delete Campaign</Text>
+            <Text style={styles.Text}>Delete Event</Text>
           </ImageBackground>
         </TouchableOpacity>
       </LinearGradient>
@@ -129,7 +120,7 @@ const styles = StyleSheet.create({
     fontFamily: "serif",
     fontWeight: "bold",
     fontStyle: "italic",
-    color: "white",
+    color: "black",
     fontSize: 18,
     marginLeft: 10
   },

@@ -8,24 +8,27 @@ import {
   TouchableOpacity
 } from "react-native";
 import { LinearGradient } from "expo";
-import data from "../Data";
 
 export default class MainScreen extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { campaignData: data.campaignList };
+    this.state = { mainScreenData: props.screenProps.mainScreenData };
   }
 
-  NextScreenTemp = itemName => {
+  NextScreenTemp = item => {
+    this.props.screenProps.updateCampaignData(item.key);
     this.props.navigation.navigate("CampaignScreen", {
-      campaignName: itemName
+      campaignName: item.campaignName,
+      campaignKey: item.key,
+      eventList: item.eventList
     });
   };
+
   renderItem = ({ item }) => {
     return (
       <TouchableOpacity
         onPress={() => {
-          this.NextScreenTemp(item.key);
+          this.NextScreenTemp(item);
         }}
       >
         <View style={styles.campaignItemView}>
@@ -35,11 +38,13 @@ export default class MainScreen extends React.Component {
               uri: item.image
             }}
           />
-          <Text style={styles.campaignTitleText}>{item.key}</Text>
+          <Text style={styles.campaignTitleText}>{item.campaignName}</Text>
         </View>
       </TouchableOpacity>
     );
   };
+
+  keyExtractor = (item, index) => item.key.toString();
 
   render() {
     return (
@@ -49,8 +54,9 @@ export default class MainScreen extends React.Component {
       >
         <FlatList
           style={styles.listView}
-          data={this.state.campaignData}
+          data={this.state.mainScreenData}
           renderItem={this.renderItem}
+          keyExtractor={this.keyExtractor}
         />
       </LinearGradient>
     );

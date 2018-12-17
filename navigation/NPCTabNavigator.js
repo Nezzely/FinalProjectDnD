@@ -8,13 +8,12 @@ import {
 import Colors from "../constants/Colors";
 import TabBarIcon from "../components/TabBarIcon";
 import NPCScreen from "../screens/NPCScreen";
-import OptionScreen from "../screens/Options/OptionScreen";
+import OptionsNPCScreen from "../screens/Options/OptionsNPCScreen";
 
 const NPCStack = createStackNavigator({
   NPCScreen: {
-    screen: NPCScreen, //Campaign Screen / EventList Screen
+    screen: NPCScreen,
     navigationOptions: ({ navigation }) => ({
-      //TODO: change the button to touchable opacity and make it an arrow back
       headerLeft: (
         <TouchableOpacity
           onPress={() => {
@@ -36,7 +35,7 @@ const NPCStack = createStackNavigator({
           />
         </TouchableOpacity>
       ),
-      title: `NPC List`
+      title: "NPC: " + navigation.getParam("NPCName")
     })
   }
 });
@@ -48,8 +47,8 @@ NPCStack.navigationOptions = {
       focused={focused}
       name={
         Platform.OS === "ios"
-          ? `ios-apps${focused ? "" : "-outline"}`
-          : "md-apps"
+          ? `ios-person${focused ? "" : "-outline"}`
+          : "md-person"
       }
     />
   )
@@ -57,10 +56,10 @@ NPCStack.navigationOptions = {
 
 const SettingsStack = createStackNavigator({
   Settings: {
-    screen: OptionScreen,
+    screen: OptionsNPCScreen,
 
     navigationOptions: ({ navigation }) => ({
-      title: "Options"
+      title: "NPC Options"
     })
   }
 });

@@ -1,6 +1,5 @@
 import React from "react";
 import { Platform } from "react-native";
-import { Icon } from "expo";
 import {
   createStackNavigator,
   createBottomTabNavigator
@@ -8,7 +7,7 @@ import {
 
 import TabBarIcon from "../components/TabBarIcon";
 import MainScreen from "../screens/MainScreen";
-import OptionScreen from "../screens/Options/OptionScreen";
+import OptionsMainScreen from "../screens/Options/OptionsMainScreen";
 
 const MainStack = createStackNavigator({
   MainScreen: {
@@ -33,10 +32,10 @@ MainStack.navigationOptions = {
 
 const SettingsStack = createStackNavigator({
   Settings: {
-    screen: OptionScreen,
+    screen: OptionsMainScreen,
 
     navigationOptions: ({ navigation }) => ({
-      title: "Options"
+      title: "Main Options"
     })
   }
 });
