@@ -14,11 +14,12 @@ const EventStack = createStackNavigator({
   EventScreen: {
     screen: EventScreen, //Campaign Screen / EventList Screen
     navigationOptions: ({ navigation }) => ({
-      //TODO: change the button to touchable opacity and make it an arrow back
       headerLeft: (
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("Campaign");
+            navigation.navigate("CampaignScreen", {
+              campaignName: navigation.getParam("campaignName")
+            });
           }}
         >
           <Icon.Ionicons
@@ -33,7 +34,7 @@ const EventStack = createStackNavigator({
           />
         </TouchableOpacity>
       ),
-      title: `"EventName"` //TODO: Get the ClickedName
+      title: navigation.getParam("eventName", "Error")
     })
   }
 });

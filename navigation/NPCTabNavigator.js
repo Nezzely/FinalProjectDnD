@@ -18,7 +18,10 @@ const NPCStack = createStackNavigator({
       headerLeft: (
         <TouchableOpacity
           onPress={() => {
-            navigation.navigate("Event");
+            navigation.navigate("EventScreen", {
+              eventName: navigation.getParam("eventName"),
+              campaignName: navigation.getParam("campaignName")
+            });
           }}
         >
           <Icon.Ionicons
