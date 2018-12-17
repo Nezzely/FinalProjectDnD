@@ -11,13 +11,6 @@ import { LinearGradient } from "expo";
 import data from "../Data";
 
 export default class MainScreen extends React.Component {
-<<<<<<< HEAD
-  NavCampaignForm = () => {
-    //navigate to the form
-  };
-  NextScreenTemp = item => {
-    this.props.navigation.navigate("Campaign");
-=======
   constructor(props) {
     super(props);
     this.state = { campaignData: data.campaignList };
@@ -27,17 +20,12 @@ export default class MainScreen extends React.Component {
     this.props.navigation.navigate("CampaignScreen", {
       campaignName: itemName
     });
->>>>>>> c240c082727eadbc95e0154ff458580a881ebfa1
   };
   renderItem = ({ item }) => {
     return (
       <TouchableOpacity
         onPress={() => {
-<<<<<<< HEAD
-          this.NextScreenTemp(item);
-=======
           this.NextScreenTemp(item.key);
->>>>>>> c240c082727eadbc95e0154ff458580a881ebfa1
         }}
       >
         <View style={styles.campaignItemView}>

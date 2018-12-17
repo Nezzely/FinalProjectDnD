@@ -32,13 +32,7 @@ const CampaignStack = createStackNavigator({
           />
         </TouchableOpacity>
       ),
-<<<<<<< HEAD
-      title: "'Events List'"
-
-      //TODO: Get the ClickedName
-=======
       title: navigation.getParam("campaignName", "Error")
->>>>>>> c240c082727eadbc95e0154ff458580a881ebfa1
     })
   }
 });
