@@ -12,9 +12,8 @@ import OptionScreen from "../screens/Options/OptionScreen";
 
 const CampaignStack = createStackNavigator({
   CampaignScreen: {
-    screen: CampaignScreen, //Campaign Screen / EventList Screen
+    screen: CampaignScreen,
     navigationOptions: ({ navigation }) => ({
-      //TODO: change the button to touchable opacity and make it an arrow back
       headerLeft: (
         <TouchableOpacity
           onPress={() => {
@@ -33,9 +32,7 @@ const CampaignStack = createStackNavigator({
           />
         </TouchableOpacity>
       ),
-      title: `"CampaignName"`
-
-      //TODO: Get the ClickedName
+      title: navigation.getParam("campaignName", "Error")
     })
   }
 });

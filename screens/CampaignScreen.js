@@ -8,16 +8,16 @@ import {
   Image
 } from "react-native";
 import { LinearGradient } from "expo";
-
 export default class CampaignScreen extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
 
-  NextScreenTemp = () => {
-    //console.log("Campaign: " + obj.item.name);
-    this.props.navigation.navigate("Event");
+  NextScreenTemp = itemName => {
+    this.props.navigation.navigate("EventScreen", {
+      eventName: itemName
+    });
   };
   renderSectionHeader = ({ section, index }) => {
     return <Text style={styles.TitleText}>{section.title}</Text>;
@@ -29,7 +29,7 @@ export default class CampaignScreen extends React.Component {
     return (
       <TouchableOpacity
         onPress={() => {
-          this.NextScreenTemp();
+          this.NextScreenTemp(obj.item.name);
         }}
       >
         <View style={styles.ItemView}>
