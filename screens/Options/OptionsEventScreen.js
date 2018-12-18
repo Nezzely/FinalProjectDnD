@@ -17,9 +17,8 @@ export default class OptionsEventScreen extends React.Component {
   logOut = () => {
     this.props.navigation.navigate("AppEntry");
   };
-  //TODO: Make text Readable or change background on buttons
 
-  //TODO: Navigation to AddNPCScreeen
+  //TODO: Navigation to AddNPCScreen
   //TODO: Navigation to EditEventScreen
   //TODO: Navigation to CampaignScreen Via "delete Event"
   render() {
@@ -58,7 +57,7 @@ export default class OptionsEventScreen extends React.Component {
         >
           <ImageBackground
             style={styles.picture}
-            //source={{ uri:            }}
+            source={{ uri: "http://i.imgur.com/sWgaN46.jpg" }}
           >
             <Icon.Ionicons
               name={Platform.OS === "ios" ? "ios-add-circle" : "md-add-circle"}
@@ -77,7 +76,7 @@ export default class OptionsEventScreen extends React.Component {
         >
           <ImageBackground
             style={styles.picture}
-            //source={{ uri:            }}
+            source={{ uri: "http://dnd.wizards.com/sites/default/files/media/styles/second_hubpage_banner/public/images/characters/EN_Classes_Fighter_Header.jpg?itok=Nj1H1mla"}}
           >
             <Icon.Ionicons
               name={Platform.OS === "ios" ? "ios-cog" : "md-cog"}
@@ -96,7 +95,7 @@ export default class OptionsEventScreen extends React.Component {
         >
           <ImageBackground
             style={styles.picture}
-            //source={{ uri:            }}
+            source={{ uri: "https://magazine.artstation.com/wp-content/uploads/2016/05/David_Baldwin-1024x424.jpg" }}
           >
             <Icon.Ionicons
               name={Platform.OS === "ios" ? "ios-trash" : "md-trash"}
@@ -127,7 +126,7 @@ const styles = StyleSheet.create({
     fontFamily: "serif",
     fontWeight: "bold",
     fontStyle: "italic",
-    color: "black",
+    color: "white",
     fontSize: 18,
     marginLeft: 10
   },

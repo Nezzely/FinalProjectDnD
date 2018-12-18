@@ -19,8 +19,6 @@ export default class OptionsEventScreen extends React.Component {
     this.props.navigation.navigate("AppEntry");
   };
 
-  //TODO: Make text Readable or change background on buttons
-
   //TODO: Navigation to EditNpcScreen
   //TODO: Navigation to Event Via "Delete NPC"
 
@@ -54,13 +52,13 @@ export default class OptionsEventScreen extends React.Component {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
-            true;
+            this.EditNPC();
           }}
           style={styles.buttonLogout}
         >
           <ImageBackground
             style={styles.picture}
-            //source={{ uri:            }}
+            source={{ uri: "https://static.tvtropes.org/pmwiki/pub/images/Blacksmith_hammering_2883.jpg" }}
           >
             <Icon.Ionicons
               name={Platform.OS === "ios" ? "ios-cog" : "md-cog"}
@@ -79,7 +77,7 @@ export default class OptionsEventScreen extends React.Component {
         >
           <ImageBackground
             style={styles.picture}
-            //source={{ uri:            }}
+            source={{ uri: "https://img.washingtonpost.com/wp-apps/imrs.php?src=https://img.washingtonpost.com/rf/image_908w/2010-2019/WashingtonPost/2013/08/23/National-Enterprise/Images/TS-Was7837184.jpg&w=480"}}
           >
             <Icon.Ionicons
               name={Platform.OS === "ios" ? "ios-trash" : "md-trash"}
@@ -110,7 +108,7 @@ const styles = StyleSheet.create({
     fontFamily: "serif",
     fontWeight: "bold",
     fontStyle: "italic",
-    color: "black",
+    color: "white",
     fontSize: 18,
     marginLeft: 10
   },

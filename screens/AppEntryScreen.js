@@ -5,7 +5,8 @@ import {
   View,
   TextInput,
   Switch,
-  TouchableOpacity
+  TouchableOpacity,
+  Alert
 } from "react-native";
 import { LinearGradient } from "expo";
 export default class AppEntryScreen extends React.Component {
@@ -43,6 +44,11 @@ export default class AppEntryScreen extends React.Component {
   SignUp = () => {
     //TODO: Write sign-up function
     //maybe just display a success message and not do anything
+    Alert.alert(
+      'Sign up successful',
+      'User successfully created!'
+    )
+    this.setState({LoginCreate_Toggle: true})
   };
 
   LoginCreate_ViewToggle = () => {
@@ -120,7 +126,7 @@ export default class AppEntryScreen extends React.Component {
           <Text style={styles.headerText}>
             <Text>D&D{"\n"}</Text>
             <Text>Dungeon Master{"\n"}</Text>
-            <Text>Managment Tool</Text>
+            <Text>Management Tool</Text>
           </Text>
         </View>
         <View style={styles.buttonsView}>
