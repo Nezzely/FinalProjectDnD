@@ -60,7 +60,10 @@ export default class OptionsEventScreen extends React.Component {
         >
           <ImageBackground
             style={styles.picture}
-            //source={{ uri:            }}
+            source={{
+              uri:
+                "https://i.pinimg.com/originals/ee/29/5b/ee295b2d2be288d5ed836b03ad1fc7a2.jpg"
+            }}
           >
             <Icon.Ionicons
               name={Platform.OS === "ios" ? "ios-cog" : "md-cog"}
@@ -79,7 +82,10 @@ export default class OptionsEventScreen extends React.Component {
         >
           <ImageBackground
             style={styles.picture}
-            //source={{ uri:            }}
+            source={{
+              uri:
+                "https://i.pinimg.com/originals/54/42/cd/5442cd07eb8f767bca7f269607187596.jpg"
+            }}
           >
             <Icon.Ionicons
               name={Platform.OS === "ios" ? "ios-trash" : "md-trash"}
@@ -110,7 +116,7 @@ const styles = StyleSheet.create({
     fontFamily: "serif",
     fontWeight: "bold",
     fontStyle: "italic",
-    color: "black",
+    color: "white",
     fontSize: 18,
     marginLeft: 10
   },
