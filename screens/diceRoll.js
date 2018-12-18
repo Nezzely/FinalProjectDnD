@@ -48,28 +48,28 @@ export default class App extends React.Component {
         <TouchableOpacity
           style={styles.touchable}
           hitSlop={{ top: 80, bottom: 80, left: 80, right: 80 }}
-          onPress={this.rolld2}
+          onPress={this.rolld2()}
         >
           <Text style={styles.buttonD2}>D2</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.touchable}
           hitSlop={{ top: 80, bottom: 80, left: 80, right: 80 }}
-          onPress={this.rolld4}
+          onPress={this.rolld4()}
         >
           <Text style={styles.buttonD4}>D4</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.touchable}
           hitSlop={{ top: 80, bottom: 80, left: 80, right: 80 }}
-          onPress={this.rolld10}
+          onPress={this.rolld10()}
         >
           <Text style={styles.buttonD10}>D10</Text>
         </TouchableOpacity>
         <TouchableOpacity
           style={styles.touchable}
           hitSlop={{ top: 80, bottom: 80, left: 80, right: 80 }}
-          onPress={this.rolld20}
+          onPress={this.rolld20()}
         >
           <Text style={styles.buttonD20}>D20</Text>
         </TouchableOpacity>
