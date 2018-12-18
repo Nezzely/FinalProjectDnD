@@ -18,8 +18,6 @@ export default class OptionsCampaignScreen extends React.Component {
     this.props.navigation.navigate("AppEntry");
   };
 
-  //TODO: Make text Readable or change background on buttons
-
   //TODO: Navigation to NewEventScreen
   //TODO: Navigation to EditCampaignScreen
   //TODO: Navigation to MainScreen Via "Delete Campaign"
@@ -138,7 +136,7 @@ const styles = StyleSheet.create({
     fontFamily: "serif",
     fontWeight: "bold",
     fontStyle: "italic",
-    color: "black",
+    color: "white",
     fontSize: 18,
     marginLeft: 10
   },
