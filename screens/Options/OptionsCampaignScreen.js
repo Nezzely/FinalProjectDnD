@@ -22,7 +22,13 @@ export default class OptionsCampaignScreen extends React.Component {
     this.props.navigation.navigate("NewEvent");
   };
   //TODO: Make text Readable or change background on buttons
-
+  removeThisCampaign = () => {
+    console.log(this.props.navigation.getParam("campaignKey"));
+    this.props.screenProps.removeCampaign(
+      this.props.navigation.getParam("campaignKey")
+    );
+    this.props.navigation.navigate("MainScreen");
+  };
   //TODO: Navigation to NewEventScreen
   //TODO: Navigation to EditCampaignScreen
   //TODO: Navigation to MainScreen Via "Delete Campaign"
@@ -101,7 +107,7 @@ export default class OptionsCampaignScreen extends React.Component {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
-            true;
+            this.removeThisCampaign();
           }}
           style={styles.buttonLogout}
         >
@@ -141,7 +147,7 @@ const styles = StyleSheet.create({
     fontFamily: "serif",
     fontWeight: "bold",
     fontStyle: "italic",
-    color: "black",
+    color: "white",
     fontSize: 18,
     marginLeft: 10
   },

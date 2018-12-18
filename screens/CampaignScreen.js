@@ -15,9 +15,28 @@ export default class CampaignScreen extends React.Component {
     super(props);
     this.state = {
       campaignKey: props.navigation.getParam("campaignKey"),
-      campaignName: this.props.navigation.getParam("campaignName"),
+      campaignName: props.navigation.getParam("campaignName"),
       eventList: this.props.screenProps.campaignScreenData
     };
+  }
+  componentDidMount() {
+    if (this.state.campaignKey != this.props.navigation.getParam("campaignKey"))
+      this.setState({
+        campaignKey: this.props.navigation.getParam("campaignKey")
+      });
+    this.props.navigation.setParams({
+      campaignKey: this.props.navigation.getParam("campaignKey")
+    });
+  }
+  componentWillUpdate() {
+    if (
+      this.state.campaignKey != this.props.navigation.getParam("campaignKey")
+    ) {
+      this.setState({
+        campaignKey: this.props.navigation.getParam("campaignKey")
+      });
+      this.props.navigation.setParams({ campaignKey: this.state.campaignKey });
+    }
   }
 
   NextScreenTemp = item => {
