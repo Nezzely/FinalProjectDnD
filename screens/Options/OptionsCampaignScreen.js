@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     fontFamily: "serif",
     fontWeight: "bold",
     fontStyle: "italic",
-    color: "black",
+    color: "white",
     fontSize: 18,
     marginLeft: 10
   },

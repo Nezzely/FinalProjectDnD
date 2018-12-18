@@ -58,7 +58,10 @@ export default class OptionsEventScreen extends React.Component {
         >
           <ImageBackground
             style={styles.picture}
-            //source={{ uri:            }}
+            source={{
+              uri:
+                "https://i2.wp.com/farm5.static.flickr.com/4100/4889745115_fda74d2b47.jpg"
+            }}
           >
             <Icon.Ionicons
               name={Platform.OS === "ios" ? "ios-add-circle" : "md-add-circle"}
@@ -77,7 +80,10 @@ export default class OptionsEventScreen extends React.Component {
         >
           <ImageBackground
             style={styles.picture}
-            //source={{ uri:            }}
+            source={{
+              uri:
+                "https://i.pinimg.com/originals/6a/f1/bf/6af1bf2aa043546a45208ae2ee961bc5.jpg"
+            }}
           >
             <Icon.Ionicons
               name={Platform.OS === "ios" ? "ios-cog" : "md-cog"}
@@ -96,7 +102,10 @@ export default class OptionsEventScreen extends React.Component {
         >
           <ImageBackground
             style={styles.picture}
-            //source={{ uri:            }}
+            source={{
+              uri:
+                "https://i.pinimg.com/originals/f9/f6/5e/f9f65e9bbcddac304ede929579ee605b.jpg"
+            }}
           >
             <Icon.Ionicons
               name={Platform.OS === "ios" ? "ios-trash" : "md-trash"}
@@ -127,7 +136,7 @@ const styles = StyleSheet.create({
     fontFamily: "serif",
     fontWeight: "bold",
     fontStyle: "italic",
-    color: "black",
+    color: "white",
     fontSize: 18,
     marginLeft: 10
   },
