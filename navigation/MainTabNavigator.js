@@ -8,6 +8,7 @@ import {
 import TabBarIcon from "../components/TabBarIcon";
 import MainScreen from "../screens/MainScreen";
 import OptionsMainScreen from "../screens/Options/OptionsMainScreen";
+import NewCampaignForm from "../screens/NewForms/NewCampaignForm";
 
 const MainStack = createStackNavigator({
   MainScreen: {
@@ -36,6 +37,12 @@ const SettingsStack = createStackNavigator({
 
     navigationOptions: ({ navigation }) => ({
       title: "Main Options"
+    })
+  },
+  NewCampaign: {
+    screen: NewCampaignForm,
+    navigationOptions: ({ navigation }) => ({
+      title: "New Campaign"
     })
   }
 });

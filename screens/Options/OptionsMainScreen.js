@@ -1,4 +1,3 @@
-//CampaignScreen
 import React from "react";
 import {
   Text,
@@ -19,7 +18,9 @@ export default class OptionsMainScreen extends React.Component {
     this.props.navigation.navigate("AppEntry");
   };
 
-  //TODO: Navigation to New Campaign
+  newCampaign = () => {
+    this.props.navigation.navigate("NewCampaign");
+  };
 
   render() {
     return (
@@ -51,7 +52,7 @@ export default class OptionsMainScreen extends React.Component {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
-            true;
+            this.newCampaign();
           }}
           style={styles.buttonLogout}
         >

@@ -18,6 +18,9 @@ export default class OptionsCampaignScreen extends React.Component {
     this.props.navigation.navigate("AppEntry");
   };
 
+  newCampaign = () => {
+    this.props.navigation.navigate("NewEvent");
+  };
   //TODO: Make text Readable or change background on buttons
 
   //TODO: Navigation to NewEventScreen
@@ -54,7 +57,7 @@ export default class OptionsCampaignScreen extends React.Component {
         </TouchableOpacity>
         <TouchableOpacity
           onPress={() => {
-            true;
+            this.newCampaign();
           }}
           style={styles.buttonLogout}
         >

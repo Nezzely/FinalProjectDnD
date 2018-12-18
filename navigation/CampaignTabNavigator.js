@@ -9,6 +9,7 @@ import Colors from "../constants/Colors";
 import TabBarIcon from "../components/TabBarIcon";
 import CampaignScreen from "../screens/CampaignScreen";
 import OptionsCampaignScreen from "../screens/Options/OptionsCampaignScreen";
+import NewEventForm from "../screens/NewForms/NewEventForm";
 
 const CampaignStack = createStackNavigator({
   CampaignScreen: {
@@ -57,6 +58,12 @@ const SettingsStack = createStackNavigator({
 
     navigationOptions: ({ navigation }) => ({
       title: "Campaign Options"
+    })
+  },
+  NewEvent: {
+    screen: NewEventForm,
+    navigationOptions: ({ navigation }) => ({
+      title: "New Event"
     })
   }
 });
